@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Isabella Rivera</title>
+<meta name="description" content="Isabella Rivera — Astronomy & Physics, University of Toronto. Research on fast radio bursts and persistent radio sources with the CHIME/FRB Collaboration." />
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #120E1B;
+    --bg-alt: #1A1428;
+    --ink: #F1ECFA;
+    --ink-soft: #ABA0C4;
+    --accent: #B48EEA;
+    --accent-2: #D4B8FF;
+    --line: #2E2542;
+    --paper: #181125;
+    --max: 800px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,h2,h3{
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    margin: 0;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+
+  a{ color: var(--accent); text-decoration-color: rgba(180,142,234,0.4); text-underline-offset: 3px; }
+  a:hover{ color: var(--accent-2); }
+
+  .eyebrow{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  /* ---------- Nav ---------- */
+  nav{
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 18px 32px;
+    background: rgba(18,14,27,0.86);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .name{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.02rem;
+    white-space: nowrap;
+    letter-spacing: -0.01em;
+  }
+  nav ul{
+    list-style:none;
+    display:flex;
+    gap: 22px;
+    margin:0; padding:0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  nav a{
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    text-decoration:none;
+    font-weight: 500;
+    white-space: nowrap;
+    font-family:'IBM Plex Mono', monospace;
+  }
+  nav a:hover{ color: var(--accent); }
+
+  section{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 84px 24px;
+  }
+  section + section{ border-top: 1px solid var(--line); }
+
+  /* ---------- Hero: starfield ---------- */
+  .hero{
+    max-width: none;
+    position: relative;
+    padding: 130px 24px 100px;
+    overflow: hidden;
+    text-align: center;
+    border-top: none;
+    background:
+      radial-gradient(1px 1px at 8% 22%, #fff, transparent),
+      radial-gradient(1px 1px at 18% 68%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 27% 40%, #fff, transparent),
+      radial-gradient(1px 1px at 35% 15%, #fff, transparent),
+      radial-gradient(1px 1px at 44% 78%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 52% 30%, #fff, transparent),
+      radial-gradient(1px 1px at 61% 60%, #fff, transparent),
+      radial-gradient(1px 1px at 70% 12%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 78% 50%, #fff, transparent),
+      radial-gradient(1px 1px at 85% 75%, #fff, transparent),
+      radial-gradient(1px 1px at 92% 25%, #fff, transparent),
+      radial-gradient(1px 1px at 12% 85%, #fff, transparent),
+      radial-gradient(1px 1px at 58% 88%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 95% 60%, #fff, transparent),
+      linear-gradient(180deg, #120E1B 0%, #171025 100%);
+    background-repeat: no-repeat;
+    opacity: 1;
+  }
+  .flare{
+    position:absolute;
+    left: 78%;
+    top: 30%;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent-2);
+    box-shadow: 0 0 8px 2px rgba(212,184,255,0.9);
+    animation: flare 3.2s ease-in-out infinite;
+  }
+  @keyframes flare{
+    0%, 100%{ opacity: 0.25; transform: scale(1); }
+    50%{ opacity: 1; transform: scale(2.4); box-shadow: 0 0 22px 8px rgba(212,184,255,0.9); }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .flare{ animation: none; opacity: 0.8; }
+  }
+
+  .hero-inner{ position:relative; z-index:1; }
+  .hero h1{
+    font-size: clamp(3rem, 8.5vw, 5rem);
+    line-height: 1.02;
+  }
+  .hero .role{
+    margin-top: 20px;
+    color: var(--ink-soft);
+    font-size: 1.15rem;
+  }
+  .hero .role strong{ color: var(--accent-2); font-weight: 600; }
+
+  .hero-links{
+    margin-top: 38px;
+    display:flex;
+    gap: 14px;
+    justify-content:center;
+    flex-wrap: wrap;
+  }
+  .btn{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    padding: 11px 20px;
+    border-radius: 2px;
+    border: 1px solid var(--accent);
+    color: var(--accent-2);
+    text-decoration:none;
+    transition: all .15s ease;
+    display: inline-block;
+  }
+  .btn:hover{ background: var(--accent); color: var(--bg); border-color: var(--accent); }
+  .btn.filled{ background: var(--accent); color: var(--bg); font-weight: 600; }
+  .btn.filled:hover{ background: var(--accent-2); border-color: var(--accent-2); }
+
+  /* ---------- About ---------- */
+  .about p{ color: var(--ink-soft); }
+  .about p + p{ margin-top: 1.1em; }
+  .about .cta{ margin-top: 26px; }
+
+  /* ---------- Section headers ---------- */
+  .section-head{ margin-bottom: 40px; display:flex; align-items:baseline; gap: 12px; }
+  .section-head .idx{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--line);
+  }
+  .section-head h2{ font-size: 1.6rem; }
+
+  /* ---------- Research timeline ---------- */
+  .entry{
+    display:grid;
+    grid-template-columns: 150px 1fr;
+    gap: 24px;
+    padding: 26px 0;
+    border-top: 1px solid var(--line);
+  }
+  .entry:last-child{ border-bottom: 1px solid var(--line); }
+  .entry time{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.76rem;
+    color: var(--accent);
+    line-height: 1.5;
+  }
+  .tag{
+    display:inline-block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.63rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--accent-2);
+    border-radius: 2px;
+    padding: 3px 7px;
+    margin-top: 8px;
+    font-weight: 600;
+  }
+  .entry h3{ font-size: 1.06rem; font-weight: 600; }
+  .entry .org{
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    margin-top: 3px;
+  }
+  .entry p{ margin-top: 10px; color: var(--ink-soft); font-size: 0.95rem; }
+
+  @media (max-width: 560px){
+    .entry{ grid-template-columns: 1fr; gap: 6px; }
+  }
+
+  /* ---------- Publications ---------- */
+  .pub{
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+  }
+  .pub:last-child{ border-bottom: 1px solid var(--line); }
+  .pub h3{ font-size: 1.02rem; font-weight: 600; line-height: 1.4; }
+  .pub .authors{ font-size: 0.9rem; color: var(--ink-soft); margin-top: 6px; }
+  .pub .authors strong{ color: var(--ink); font-weight: 600; }
+  .pub .meta{
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.74rem;
+    color: var(--accent);
+    margin-top: 8px;
+  }
+
+  /* ---------- Two-col list (awards / presentations) ---------- */
+  .list-item{
+    padding: 20px 0;
+    border-top: 1px solid var(--line);
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .list-item:last-child{ border-bottom: 1px solid var(--line); }
+  .list-item h3{ font-size: 1rem; font-weight: 600; }
+  .list-item .org{ font-size: 0.88rem; color: var(--ink-soft); }
+  .list-item .meta{ font-family:'IBM Plex Mono', monospace; font-size: 0.72rem; color: var(--accent); margin-top: 2px; }
+  .list-item p{ margin-top: 8px; color: var(--ink-soft); font-size: 0.92rem; }
+
+  /* ---------- Outreach ---------- */
+  .outreach-bg{ background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .outreach-bg section{ border-top: none; }
+
+  /* ---------- Contact ---------- */
+  .contact-links{
+    display:flex;
+    flex-direction:column;
+    gap: 12px;
+    margin-top: 28px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 0.92rem;
+  }
+  .contact-links a{ text-decoration:none; }
+  .contact-links a:hover{ text-decoration:underline; }
+
+  footer{
+    text-align:center;
+    padding: 40px 24px 60px;
+    color: var(--ink-soft);
+    font-size: 0.8rem;
+    font-family:'IBM Plex Mono', monospace;
+  }
+
+  /* reveal on scroll */
+  .reveal{ opacity:0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:none; }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+  }
+
+  @media (max-width: 700px){
+    nav{ padding: 14px 18px; flex-direction: column; align-items: flex-start; gap: 10px; }
+    nav ul{ gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="name">ISABELLA RIVERA</div>
+  <ul>
+    <li><a href="#about">about</a></li>
+    <li><a href="#research">research</a></li>
+    <li><a href="#publications">publications</a></li>
+    <li><a href="#awards">awards</a></li>
+    <li><a href="#outreach">outreach</a></li>
+    <li><a href="#contact">contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <div class="flare" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="eyebrow">Undergraduate Researcher</p>
+    <h1>Isabella Rivera</h1>
+    <p class="role">Astronomy &amp; Physics, <strong>University of Toronto</strong> — Radio astronomy · Fast radio bursts</p>
+    <div class="hero-links">
+      <a class="btn filled" href="/assets/pdf/isabella_rivera_cv.pdf" target="_blank" rel="noopener">Download CV</a>
+      <a class="btn" href="#contact">Get in touch</a>
+      <a class="btn" href="https://www.linkedin.com/in/isabellariv/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/isabellarivera-jpg" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="reveal">
+  <div class="section-head"><span class="idx">01</span><h2>About</h2></div>
+  <div class="about">
+    <p>I am an undergraduate student at the University of Toronto, St. George, pursuing a Specialist degree in Astronomy and Physics with a Minor in Mathematics. My research focuses on radio astronomy — specifically fast radio bursts (FRBs) and their persistent radio source counterparts. I am currently working with the CHIME/FRB Collaboration through the Summer Undergraduate Research Program (SURP) at the Dunlap Institute for Astronomy and Astrophysics, and I am also a member of the CHIME/FRB Sidelobe FRB team.</p>
+    <p>Outside of research, I serve as President of the Astronomy &amp; Space Exploration Society at the University of Toronto, a 1,000+ member student organization, and I care deeply about making STEM more inclusive and accessible. If you'd like to learn more about my work, feel free to reach out.</p>
+    <div class="cta">
+      <a class="btn" href="/assets/pdf/isabella_rivera_cv.pdf" target="_blank" rel="noopener">View my CV — PDF</a>
+    </div>
+  </div>
+</section>
+
+<section id="research" class="reveal">
+  <div class="section-head"><span class="idx">02</span><h2>Research Experience</h2></div>
+
+  <div class="entry">
+    <div><time>Sept 2025<br>— Present</time><br><span class="tag">Ongoing</span></div>
+    <div>
+      <h3>CHIME/FRB Sidelobe Localization</h3>
+      <div class="org">Dunlap Institute for Astronomy &amp; Astrophysics, UofT · Prof. Juan Mena-Parra</div>
+      <p>Part of the CHIME/FRB Sidelobe working group. Using localization techniques to better localize FRB events detected in CHIME's sidelobes, and applying these methods to identify associated host galaxies.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><time>Summer 2026<br>— Present</time><br><span class="tag">Ongoing</span></div>
+    <div>
+      <h3>FRB Multi-wavelength Counterpart Searches</h3>
+      <div class="org">SURP, Dunlap Institute for Astronomy &amp; Astrophysics · Prof. Maria Drout, Prof. Juan Mena-Parra, Mattias Lazda</div>
+      <p>Selected for the Summer Undergraduate Research Program (SURP) in Astronomy and Astrophysics. My research focuses on fast radio burst localization and multi-wavelength counterpart searches within the CHIME/FRB Collaboration — archival searches for radio and X-ray counterparts to FRBs, identifying candidate sources within localization regions and assessing promising events for potential follow-up.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><time>Jan 2026<br>— May 2026</time></div>
+    <div>
+      <h3>SPYGLASS — Star Forming Regions in Vela</h3>
+      <div class="org">AST430 Student Research Course · Dr. Ronan Kerr, Prof. Joshua Speagle</div>
+      <p>Investigating star forming regions in the Vela Complex as part of the SPYGLASS program, studying their morphology and evolutionary histories.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><time>Summer 2025</time></div>
+    <div>
+      <h3>CHIME Outriggers — FRB Localization Pipeline</h3>
+      <div class="org">UTRAIN Team, University of Toronto · Prof. Juan Mena-Parra</div>
+      <p>Developed and tested clock synchronization methods for CHIME Outriggers — incorporating noise modelling, interpolation techniques, and detailed error analysis — aiming to improve FRB localization, including a novel localization method of my own.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><time>May 2023<br>— Apr 2025</time></div>
+    <div>
+      <h3>COBWEB — Modeling Space-Time</h3>
+      <div class="org">School of the Environment, UofT · Dr. Brad Bass</div>
+      <p>Student researcher on the astrophysics subteam. Used COBWEB agent-based simulation software to model space-time and its effects on celestial bodies. Presented at the University of Toronto Undergraduate Research Poster Fair.</p>
+    </div>
+  </div>
+</section>
+
+<section id="publications" class="reveal">
+  <div class="section-head"><span class="idx">03</span><h2>Publications</h2></div>
+
+  <div class="pub">
+    <h3>Improved Localization of CHIME/FRB Far-Sidelobe Fast Radio Bursts</h3>
+    <div class="authors">Gusinskaia, N. + co-authors including <strong>Rivera, I.</strong></div>
+    <div class="meta">In preparation · 2026</div>
+  </div>
+
+  <div class="pub">
+    <h3>A Comprehensive Search for Multi-wavelength Counterparts to the Second CHIME/FRB Baseband Catalog</h3>
+    <div class="authors">The CHIME/FRB Collaboration + co-authors including <strong>Rivera, I.</strong></div>
+    <div class="meta">In preparation · 2026</div>
+  </div>
+</section>
+
+<section id="awards" class="reveal">
+  <div class="section-head"><span class="idx">04</span><h2>Awards &amp; Presentations</h2></div>
+
+  <div class="list-item">
+    <h3>John L. Horwood Memorial Scholarship — $1,000</h3>
+    <div class="org">David A. Dunlap Department of Astronomy and Astrophysics</div>
+    <div class="meta">August 2025</div>
+    <p>Awarded to individuals who are consistent and dependable volunteers at Dunlap Institute outreach events and regularly engage with outreach initiatives.</p>
+  </div>
+
+  <div class="list-item">
+    <h3>Samuel Beatty Travel Award — $500</h3>
+    <div class="org">University of Toronto Physics Department</div>
+    <div class="meta">January 2025</div>
+    <p>Awarded to students seeking funding to attend nationwide STEM conferences.</p>
+  </div>
+
+  <div class="list-item">
+    <h3>Admissions Scholarship — $1,000</h3>
+    <div class="org">University of Toronto Victoria College</div>
+    <div class="meta">September 2023</div>
+    <p>Awarded to high school graduates in Ontario who attain an average of 80% or greater in their six best Grade 12 courses.</p>
+  </div>
+
+  <div class="list-item">
+    <h3>Dunlap Admin's Bestie Award</h3>
+    <div class="org">David A. Dunlap Department of Astronomy and Astrophysics</div>
+    <div class="meta">January 2026</div>
+  </div>
+
+  <div class="list-item">
+    <h3>"One Neat Thing" — Research Talk</h3>
+    <div class="org">Astronomy &amp; Space Exploration Association, University of Toronto</div>
+    <p>Presented my research to over 350 attendees.</p>
+  </div>
+
+  <div class="list-item">
+    <h3>Poster Presentation — Undergraduate Research Poster Fair</h3>
+    <div class="org">University of Toronto</div>
+    <p>COBWEB: Modeling Space-Time and Its Effects on Celestial Bodies.</p>
+  </div>
+
+  <div class="list-item">
+    <h3>Canadian Space Conference — Booth Presenter</h3>
+    <div class="meta">January 2026</div>
+    <p>Presented a booth on behalf of the Astronomy and Space Exploration Association.</p>
+  </div>
+</section>
+
+<div class="outreach-bg">
+<section id="outreach" class="reveal">
+  <div class="section-head"><span class="idx">05</span><h2>Outreach &amp; Leadership</h2></div>
+
+  <div class="list-item">
+    <h3>President, Astronomy &amp; Space Exploration Society (ASX)</h3>
+    <div class="org">University of Toronto</div>
+    <div class="meta">April 2025 — Present</div>
+    <p>Help organize events, outreach initiatives, and opportunities for students and the broader community to engage with astronomy and space science. Fundraised $4,500 in sponsorships; presented a booth at the Canadian Space Conference.</p>
+  </div>
+
+  <div class="list-item">
+    <h3>Events Director, ASX</h3>
+    <div class="meta">April 2024 — April 2025</div>
+    <p>Helped plan and run CASCA-TO 2024 (Canadian Astronomical Society) with 400 attendees.</p>
+  </div>
+
+  <div class="list-item">
+    <h3>External Affairs Director, Women in Science and Engineering (WISE)</h3>
+    <div class="org">University of Toronto</div>
+    <div class="meta">April 2024 — April 2025</div>
+  </div>
+
+  <div class="list-item">
+    <h3>Volunteer, AstroTours</h3>
+    <div class="org">University of Toronto, Department of Astronomy and Astrophysics</div>
+    <div class="meta">September 2024 — Present</div>
+  </div>
+
+  <div class="list-item">
+    <h3>Events Assistant, Work Study Program</h3>
+    <div class="org">Dunlap Institute for Astronomy and Astrophysics</div>
+    <div class="meta">April 2024 — August 2024</div>
+  </div>
+
+  <div class="list-item">
+    <h3>Host</h3>
+    <div class="org">Ontario Science Centre</div>
+    <div class="meta">April 2024 — September 2024</div>
+  </div>
+</section>
+</div>
+
+<section id="contact" class="reveal">
+  <div class="section-head"><span class="idx">06</span><h2>Contact</h2></div>
+  <p style="color:var(--ink-soft);">I'm always happy to connect about research, opportunities, or anything astronomy.</p>
+  <div class="contact-links">
+    <a href="mailto:isabellamariarivera2005@gmail.com">→ isabellamariarivera2005@gmail.com</a>
+    <a href="https://www.linkedin.com/in/isabellariv/" target="_blank" rel="noopener">→ linkedin.com/in/isabellariv</a>
+    <a href="https://github.com/isabellarivera-jpg" target="_blank" rel="noopener">→ github.com/isabellarivera-jpg</a>
+  </div>
+</section>
+
+<footer>Isabella Rivera · Toronto</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
