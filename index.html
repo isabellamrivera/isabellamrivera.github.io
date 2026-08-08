@@ -146,6 +146,27 @@
 }
 
   .hero-inner{ position:relative; z-index:1; }
+
+  .hero-row{
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  justify-content: center;
+  text-align: left;
+  flex-wrap: wrap;
+}
+.hero-photo{
+  width: 140px !important;
+  height: 140px !important;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 30px 6px rgba(180,142,234,0.35);
+  flex-shrink: 0;
+  max-width: 140px;
+}
+.hero-text{ max-width: 480px; }
+  
   .hero h1{
     font-size: clamp(3rem, 8.5vw, 5rem);
     line-height: 1.02;
@@ -334,7 +355,7 @@
     </div>
   </div>
 </header>
-
+  
 <section id="about" class="reveal">
   <div class="section-head"><span class="idx">01</span><h2>About</h2></div>
   <div class="about">
