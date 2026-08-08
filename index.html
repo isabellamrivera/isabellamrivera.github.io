@@ -263,6 +263,13 @@
     border-top: 1px solid var(--line);
   }
   .pub:last-child{ border-bottom: 1px solid var(--line); }
+  .pub-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
   .pub h3{ font-size: 1.4rem; font-weight: 600; line-height: 1.4; }
   .pub .authors{ font-size: 1.1rem; color: var(--ink-soft); margin-top: 6px; }
   .pub .authors strong{ color: var(--ink); font-weight: 600; }
@@ -272,6 +279,7 @@
     color: var(--accent);
     margin-top: 8px;
   }
+  .pub .tag{ margin-top: 4px; flex-shrink: 0; white-space: nowrap; }
 
   /* ---------- Two-col list (awards / presentations) ---------- */
   .list-item{
@@ -338,6 +346,7 @@
     <li><a href="#research">research</a></li>
     <li><a href="#publications">publications</a></li>
     <li><a href="#awards">awards</a></li>
+    <li><a href="#presentations">presentations</a></li>
     <li><a href="#outreach">outreach</a></li>
     <li><a href="#contact">contact</a></li>
   </ul>
@@ -377,15 +386,6 @@
   <div class="section-head"><span class="idx">02</span><h2>Research Experience</h2></div>
 
   <div class="entry">
-    <div><time>Sept 2025<br>— Present</time><br><span class="tag">Ongoing</span></div>
-    <div>
-      <h3>CHIME/FRB Sidelobe Localization</h3>
-      <div class="org">Dunlap Institute for Astronomy &amp; Astrophysics, UofT · Prof. Juan Mena-Parra</div>
-      <p>Part of the CHIME/FRB Sidelobe working group. Using localization techniques to better localize FRB events detected in CHIME's sidelobes, and applying these methods to identify associated host galaxies.</p>
-    </div>
-  </div>
-
-  <div class="entry">
     <div><time>Summer 2026<br>— Present</time><br><span class="tag">Ongoing</span></div>
     <div>
       <h3>FRB Multi-wavelength Counterpart Searches</h3>
@@ -400,6 +400,15 @@
       <h3>SPYGLASS — Star Forming Regions in Vela</h3>
       <div class="org">AST430 Student Research Course · Dr. Ronan Kerr, Prof. Joshua Speagle</div>
       <p>Investigating star forming regions in the Vela Complex as part of the SPYGLASS program, studying their morphology and evolutionary histories.</p>
+    </div>
+  </div>
+
+  <div class="entry">
+    <div><time>Sept 2025<br>— Present</time><br><span class="tag">Ongoing</span></div>
+    <div>
+      <h3>CHIME/FRB Sidelobe Localization</h3>
+      <div class="org">Dunlap Institute for Astronomy &amp; Astrophysics, UofT · Prof. Juan Mena-Parra</div>
+      <p>Part of the CHIME/FRB Sidelobe working group. Using localization techniques to better localize FRB events detected in CHIME's sidelobes, and applying these methods to identify associated host galaxies.</p>
     </div>
   </div>
 
@@ -426,20 +435,26 @@
   <div class="section-head"><span class="idx">03</span><h2>Publications</h2></div>
 
   <div class="pub">
-    <h3>Improved Localization of CHIME/FRB Far-Sidelobe Fast Radio Bursts</h3>
+    <div class="pub-head">
+      <h3>Improved Localization of CHIME/FRB Far-Sidelobe Fast Radio Bursts</h3>
+      <span class="tag">In Prep</span>
+    </div>
     <div class="authors">Gusinskaia, N. + co-authors including <strong>Rivera, I.</strong></div>
     <div class="meta">In preparation · 2026</div>
   </div>
 
   <div class="pub">
-    <h3>A Comprehensive Search for Multi-wavelength Counterparts to the Second CHIME/FRB Baseband Catalog</h3>
+    <div class="pub-head">
+      <h3>A Comprehensive Search for Multi-wavelength Counterparts to the Second CHIME/FRB Baseband Catalog</h3>
+      <span class="tag">In Prep</span>
+    </div>
     <div class="authors">The CHIME/FRB Collaboration + co-authors including <strong>Rivera, I.</strong></div>
     <div class="meta">In preparation · 2026</div>
   </div>
 </section>
 
 <section id="awards" class="reveal">
-  <div class="section-head"><span class="idx">04</span><h2>Awards &amp; Presentations</h2></div>
+  <div class="section-head"><span class="idx">04</span><h2>Awards</h2></div>
 
   <div class="list-item">
     <h3>John L. Horwood Memorial Scholarship — $1,000</h3>
@@ -467,6 +482,10 @@
     <div class="org">David A. Dunlap Department of Astronomy and Astrophysics</div>
     <div class="meta">January 2026</div>
   </div>
+</section>
+
+<section id="presentations" class="reveal">
+  <div class="section-head"><span class="idx">05</span><h2>Presentations</h2></div>
 
   <div class="list-item">
     <h3>"One Neat Thing" — Research Talk</h3>
@@ -489,7 +508,7 @@
 
 <div class="outreach-bg">
 <section id="outreach" class="reveal">
-  <div class="section-head"><span class="idx">05</span><h2>Outreach &amp; Leadership</h2></div>
+  <div class="section-head"><span class="idx">06</span><h2>Outreach &amp; Leadership</h2></div>
 
   <div class="list-item">
     <h3>President, Astronomy &amp; Space Exploration Society (ASX)</h3>
@@ -531,7 +550,7 @@
 </div>
 
 <section id="contact" class="reveal">
-  <div class="section-head"><span class="idx">06</span><h2>Contact</h2></div>
+  <div class="section-head"><span class="idx">07</span><h2>Contact</h2></div>
   <p style="color:var(--ink-soft);">I'm always happy to connect about research, opportunities, or anything astronomy.</p>
   <div class="contact-links">
     <a href="mailto:isabellamariarivera2005@gmail.com">→ isabellamariarivera2005@gmail.com</a>
