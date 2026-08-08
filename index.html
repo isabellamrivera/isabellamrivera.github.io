@@ -95,7 +95,7 @@
   section{
     max-width: var(--max);
     margin: 0 auto;
-    padding: 84px 24px;
+    padding: 84px 80px;
   }
   section + section{ border-top: 1px solid var(--line); }
 
@@ -103,7 +103,7 @@
   .hero{
     max-width: none;
     position: relative;
-    padding: 130px 24px 100px;
+    padding: 130px 80px 100px;
     overflow: hidden;
     text-align: left;
     border-top: none;
@@ -220,7 +220,7 @@
   /* ---------- Research timeline ---------- */
   .entry{
     display:grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 180px 1fr;
     gap: 24px;
     padding: 26px 0;
     border-top: 1px solid var(--line);
@@ -228,14 +228,14 @@
   .entry:last-child{ border-bottom: 1px solid var(--line); }
   .entry time{
     font-family:'IBM Plex Mono', monospace;
-    font-size: 1.9rem;
+    font-size: 0.95rem;
     color: var(--accent);
     line-height: 1.5;
   }
   .tag{
     display:inline-block;
     font-family:'IBM Plex Mono', monospace;
-    font-size: 0.63rem;
+    font-size: 0.75rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--bg);
@@ -245,13 +245,13 @@
     margin-top: 8px;
     font-weight: 600;
   }
-  .entry h3{ font-size: 1.06rem; font-weight: 600; }
+  .entry h3{ font-size: 1.4rem; font-weight: 600; }
   .entry .org{
-    font-size: 0.88rem;
+    font-size: 1.05rem;
     color: var(--ink-soft);
     margin-top: 3px;
   }
-  .entry p{ margin-top: 10px; color: var(--ink-soft); font-size: 0.95rem; }
+  .entry p{ margin-top: 10px; color: var(--ink-soft); font-size: 1.15rem; }
 
   @media (max-width: 560px){
     .entry{ grid-template-columns: 1fr; gap: 6px; }
@@ -263,12 +263,12 @@
     border-top: 1px solid var(--line);
   }
   .pub:last-child{ border-bottom: 1px solid var(--line); }
-  .pub h3{ font-size: 1.02rem; font-weight: 600; line-height: 1.4; }
-  .pub .authors{ font-size: 0.9rem; color: var(--ink-soft); margin-top: 6px; }
+  .pub h3{ font-size: 1.4rem; font-weight: 600; line-height: 1.4; }
+  .pub .authors{ font-size: 1.1rem; color: var(--ink-soft); margin-top: 6px; }
   .pub .authors strong{ color: var(--ink); font-weight: 600; }
   .pub .meta{
     font-family:'IBM Plex Mono', monospace;
-    font-size: 0.74rem;
+    font-size: 0.95rem;
     color: var(--accent);
     margin-top: 8px;
   }
@@ -282,10 +282,10 @@
     gap: 4px;
   }
   .list-item:last-child{ border-bottom: 1px solid var(--line); }
-  .list-item h3{ font-size: 1rem; font-weight: 600; }
-  .list-item .org{ font-size: 0.88rem; color: var(--ink-soft); }
-  .list-item .meta{ font-family:'IBM Plex Mono', monospace; font-size: 0.72rem; color: var(--accent); margin-top: 2px; }
-  .list-item p{ margin-top: 8px; color: var(--ink-soft); font-size: 0.92rem; }
+  .list-item h3{ font-size: 1.3rem; font-weight: 600; }
+  .list-item .org{ font-size: 1.05rem; color: var(--ink-soft); }
+  .list-item .meta{ font-family:'IBM Plex Mono', monospace; font-size: 0.9rem; color: var(--accent); margin-top: 2px; }
+  .list-item p{ margin-top: 8px; color: var(--ink-soft); font-size: 1.1rem; }
 
   /* ---------- Outreach ---------- */
   .outreach-bg{ background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -298,7 +298,7 @@
     gap: 12px;
     margin-top: 28px;
     font-family:'IBM Plex Mono', monospace;
-    font-size: 0.92rem;
+    font-size: 1.05rem;
   }
   .contact-links a{ text-decoration:none; }
   .contact-links a:hover{ text-decoration:underline; }
@@ -321,6 +321,8 @@
   @media (max-width: 700px){
     nav{ padding: 16px 18px; flex-direction: column; align-items: flex-start; gap: 10px; }
     nav ul{ gap: 16px; }
+    section{ padding: 84px 24px; }
+    .hero{ padding: 130px 24px 100px; }
     .hero-row{ justify-content: center; text-align: center; }
     .hero-text{ text-align: center; }
     .hero-links{ justify-content: center; }
@@ -368,7 +370,6 @@
     <p>Much of my recent work has focused on understanding FRBs and the environments they come from. My current work, through the Summer Undergraduate Research Program (SURP) at the Dunlap Institute for Astronomy and Astrophysics, focuses on searches for persistent radio sources associated with FRBs. I have also worked on improving the localization of FRBs detected in the far sidelobes of CHIME, along with other projects within the CHIME/FRB Collaboration. I am especially interested in using multi-wavelength observations to better understand the sources and environments behind these still-mysterious bursts.</p>
     <p>Beyond research, I'm passionate about astronomy outreach and making science accessible to a wider community. I currently serve as President of the University of Toronto's Astronomy &amp; Space Exploration Association (ASX), a 1,000+ member student organization, where I help organize astronomy events, observing nights, and outreach initiatives.</p>
     <p>Outside of astronomy, I enjoy biking, thrifting, exploring coffee shops, reading, and learning about history, philosophy, and archaeology.</p>
-    </div>
   </div>
 </section>
 
