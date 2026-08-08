@@ -217,7 +217,7 @@
   }
   .section-head h2{ font-size: 1.9rem; }
 
-  /* ---------- Research timeline ---------- */
+  /* ---------- Timeline entries (Research + Publications) ---------- */
   .entry{
     display:grid;
     grid-template-columns: 180px 1fr;
@@ -256,30 +256,6 @@
   @media (max-width: 560px){
     .entry{ grid-template-columns: 1fr; gap: 6px; }
   }
-
-  /* ---------- Publications ---------- */
-  .pub{
-    padding: 24px 0;
-    border-top: 1px solid var(--line);
-  }
-  .pub:last-child{ border-bottom: 1px solid var(--line); }
-  .pub-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-  .pub h3{ font-size: 1.4rem; font-weight: 600; line-height: 1.4; }
-  .pub .authors{ font-size: 1.1rem; color: var(--ink-soft); margin-top: 6px; }
-  .pub .authors strong{ color: var(--ink); font-weight: 600; }
-  .pub .meta{
-    font-family:'IBM Plex Mono', monospace;
-    font-size: 0.95rem;
-    color: var(--accent);
-    margin-top: 8px;
-  }
-  .pub .tag{ margin-top: 4px; flex-shrink: 0; white-space: nowrap; }
 
   /* ---------- Two-col list (awards / presentations) ---------- */
   .list-item{
@@ -434,22 +410,20 @@
 <section id="publications" class="reveal">
   <div class="section-head"><span class="idx">03</span><h2>Publications</h2></div>
 
-  <div class="pub">
-    <div class="pub-head">
+  <div class="entry">
+    <div><time>2026</time><br><span class="tag">In Prep</span></div>
+    <div>
       <h3>Improved Localization of CHIME/FRB Far-Sidelobe Fast Radio Bursts</h3>
-      <span class="tag">In Prep</span>
+      <div class="org">Gusinskaia, N. + co-authors including <strong>Rivera, I.</strong></div>
     </div>
-    <div class="authors">Gusinskaia, N. + co-authors including <strong>Rivera, I.</strong></div>
-    <div class="meta">In preparation · 2026</div>
   </div>
 
-  <div class="pub">
-    <div class="pub-head">
+  <div class="entry">
+    <div><time>2026</time><br><span class="tag">In Prep</span></div>
+    <div>
       <h3>A Comprehensive Search for Multi-wavelength Counterparts to the Second CHIME/FRB Baseband Catalog</h3>
-      <span class="tag">In Prep</span>
+      <div class="org">The CHIME/FRB Collaboration + co-authors including <strong>Rivera, I.</strong></div>
     </div>
-    <div class="authors">The CHIME/FRB Collaboration + co-authors including <strong>Rivera, I.</strong></div>
-    <div class="meta">In preparation · 2026</div>
   </div>
 </section>
 
