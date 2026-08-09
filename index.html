@@ -271,6 +271,38 @@
   .list-item .meta{ font-family:'IBM Plex Mono', monospace; font-size: 0.9rem; color: var(--accent); margin-top: 2px; }
   .list-item p{ margin-top: 8px; color: var(--ink-soft); font-size: 1.1rem; }
 
+  /* ---------- Media row (photo beside text, with caption) ---------- */
+  .media-row{
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .media-text{ flex: 1 1 320px; min-width: 260px; }
+  .media-text p{ margin-top: 0; }
+  .media-figure{
+    margin: 0;
+    flex: 0 0 300px;
+    max-width: 300px;
+  }
+  .media-figure img{
+    display: block;
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid var(--line);
+  }
+  .media-figure figcaption{
+    margin-top: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+  @media (max-width: 560px){
+    .media-figure{ flex-basis: 100%; max-width: 100%; }
+  }
+
   /* ---------- Outreach ---------- */
   .outreach-bg{ background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
   .outreach-bg section{ border-top: none; }
@@ -479,11 +511,18 @@
   <p class="eyebrow" style="display:block; margin: 32px 0 4px;">Posters</p>
 
   <div class="list-item">
-  <h3>Canadian Astronomical Society (CASCA) Annual Meeting</h3>
-  <div class="meta">June 2026</div>
-  <p>Presented a poster on improved localization techniques for CHIME/FRB far-sidelobe events.</p>
-  <img src="/assets/img/casca.jpeg" alt="CASCA 2025 poster presentation" style="width:100%; max-width:600px; border-radius:6px; margin-top:16px; border:1px solid var(--line);">
-</div>
+    <h3>Canadian Astronomical Society (CASCA) Annual Meeting</h3>
+    <div class="meta">June 2026</div>
+    <div class="media-row">
+      <div class="media-text">
+        <p>Presented a poster on improved localization techniques for CHIME/FRB far-sidelobe events.</p>
+      </div>
+      <figure class="media-figure">
+        <img src="/assets/img/casca.jpeg" alt="CASCA poster presentation">
+        <figcaption>Presenting my poster at the CASCA Annual Meeting, June 2026.</figcaption>
+      </figure>
+    </div>
+  </div>
 
   <div class="list-item">
     <h3>Research Opportunity Program (ROP) Poster Fair</h3>
@@ -502,16 +541,23 @@
 
 
   <div class="list-item">
-  <h3>President, Astronomy &amp; Space Exploration Society (ASX)</h3>
-  <div class="org">University of Toronto</div>
-  <div class="meta">April 2025 — Present</div>
-  <p>Help organize events, outreach initiatives, and opportunities for students and the general public to engage with astronomy and space science. Represent over 1000 members; Fundraised $4,500 in sponsorships; presented a booth at the Canadian Space Conference.</p>
-  <ul style="margin-top: 10px; padding-left: 20px; color: var(--ink-soft); font-size: 1.1rem;">
-    <li>Symposium Director, ASX Symposium (2025–2026)</li>
-    <li>Events Director, ASX (2024–2025)</li>
-  </ul>
-  <img src="/assets/img/asx-symposium.jpg" alt="ASX Symposium 2025 group photo" style="width:100%; max-width:600px; border-radius:6px; margin-top:16px; border:1px solid var(--line);">
-</div>
+    <h3>President, Astronomy &amp; Space Exploration Society (ASX)</h3>
+    <div class="org">University of Toronto</div>
+    <div class="meta">April 2025 — Present</div>
+    <div class="media-row">
+      <div class="media-text">
+        <p>Help organize events, outreach initiatives, and opportunities for students and the general public to engage with astronomy and space science. Represent over 1000 members; Fundraised $4,500 in sponsorships; presented a booth at the Canadian Space Conference.</p>
+        <ul style="margin-top: 10px; padding-left: 20px; color: var(--ink-soft); font-size: 1.1rem;">
+          <li>Symposium Director, ASX Symposium (2025–2026)</li>
+          <li>Events Director, ASX (2024–2025)</li>
+        </ul>
+      </div>
+      <figure class="media-figure">
+        <img src="/assets/img/asx-symposium.jpg" alt="ASX Symposium group photo">
+        <figcaption>The ASX team at the 2025–2026 Symposium.</figcaption>
+      </figure>
+    </div>
+  </div>
   
   <div class="list-item">
     <h3>External Affairs Director, Women in Science and Engineering (WISE)</h3>
@@ -565,7 +611,7 @@
   </div>
 </section>
 
-<footer>Isabella Rivera · Uhiversity of Toronto</footer>
+<footer>Isabella Rivera · University of Toronto</footer>
 
 <script>
   const io = new IntersectionObserver((entries)=>{
